@@ -1,0 +1,21 @@
+/* libraries-------------------------------------------------- */
+//include fona libarary
+#include "Adafruit_FONA.h"
+
+// include the LCD library code:
+#include <Wire.h>
+#include <LiquidTWI.h>
+
+//include the onewire and Dallas sensor libraries
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+/*------------temperature sensor stuff---------------------*/
+//DS18B20 pin
+#define ONE_WIRE_BUS 5
+
+//instance of Dallas sensor
+OneWire oneWire(ONE_WIRE_BUS);
+
+// Pass our oneWire reference to Dallas Temperature.
+DallasTemperature sensors(&oneWire);
